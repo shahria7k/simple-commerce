@@ -1,5 +1,4 @@
 import { Routes, Route, Link } from "react-router-dom";
-import Navbar from "./components/navbar/Navbar";
 import CartPage from "./pages/CartPage";
 import CheckoutPage from "./pages/CheckoutPage";
 import HomePage from "./pages/HomePage";
@@ -14,8 +13,9 @@ import WishlistPage from "./pages/WishlistPage";
 function App() {
     return (
         <>
-        <Navbar></Navbar>
         <Routes>
+            <Route path="*" element={ <NotFound /> }></Route>
+
             <Route path="/" element={ <HomePage /> }></Route>
             <Route path="/product" element={ <ProductPage /> }></Route>
             <Route path="/cart" element={ <CartPage /> }></Route>
@@ -26,8 +26,6 @@ function App() {
             <Route path="/sign-up" element={ <SignUpPage /> }></Route>
             <Route path="/forget-pass" element={ <ResetPage /> }></Route>
 
-
-            <Route path="*" element={ <NotFound /> }></Route>
         </Routes>
         </>
     );

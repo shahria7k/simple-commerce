@@ -1,9 +1,13 @@
 import React from 'react'
 import AddToCart from '../components/cart/AddToCart';
+import UserNavbar from '../components/navbar/UserNavbar';
 
 const Cart = () => {
   return (
-    <AddToCart></AddToCart>
+    <>
+      <UserNavbar></UserNavbar>
+      <AddToCart></AddToCart>
+    </>
   )
 }
 

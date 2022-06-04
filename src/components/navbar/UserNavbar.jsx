@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import Logo from '../../assets/images/logo.png'
 
-function Navbar() {
+function UserNavbar() {
   return (
     // Header Area
     <header className="header-area">
@@ -61,4 +61,4 @@ function Navbar() {
   )
 }
 
-export default Navbar
+export default UserNavbar

@@ -1,9 +1,13 @@
 import React from 'react'
+import UserNavbar from '../components/navbar/UserNavbar'
 import Wishlist from '../components/wishlist/Wishlist'
 
 const WishlistPage = () => {
   return (
-    <Wishlist></Wishlist>
+    <>
+      <UserNavbar></UserNavbar>
+      <Wishlist></Wishlist>
+    </>
   )
 }
 

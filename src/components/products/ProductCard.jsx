@@ -2,21 +2,20 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import ProductImage from '../../assets/images/shoe.png'
 
-function ProductCard() {
+function ProductCard({ photo, title, price, id }) {
   return (
       <div className="col-6 col-lg-3">
           <div className="product-card">
+          <Link to={`/product/${id}`}>
               <div className="btn-discount">
                   50%
               </div>
               <div className="product-image">
-                  <img src={ProductImage} alt="Product Image" className='img-fluid rounded' />
+                  <img src={photo} alt="Product Image" className='img-fluid rounded' />
               </div>
               <div className="product-data">
-                  <p>$483.00</p>
-                  <Link to="/product">
-                    <h5>Sniker GT22-01</h5>
-                  </Link>
+                  <p>${price}</p>
+                  <h5>{title}</h5>
 
                   <div className="mt-2 text-end">
                     <a href="" className='btn-cart'>
@@ -32,6 +31,7 @@ function ProductCard() {
                     </a>
                   </div>
               </div>
+          </Link>
           </div>
       </div>
   )

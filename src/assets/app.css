@@ -161,13 +161,18 @@ ul{
     position: relative;
 }
 
-.products-area .product-card:hover{
+/* .products-area .product-card:hover{
     background-color: #F47C7C;
-}
+} */
 
 .products-area .product-card .product-image{
     height: 200px;
     max-height: 200px;
+    overflow: hidden;
+}
+
+.products-area .product-card h5{
+    height: 50px;
     overflow: hidden;
 }
 

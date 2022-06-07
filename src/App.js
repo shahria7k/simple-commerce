@@ -14,17 +14,17 @@ function App() {
     return (
         <>
         <Routes>
-            <Route path="*" element={ <NotFound /> }></Route>
+            <Route exact path="*" element={ <NotFound /> }></Route>
 
-            <Route path="/" element={ <HomePage /> }></Route>
-            <Route path="/product/:productId" element={ <ProductPage /> }></Route>
-            <Route path="/cart" element={ <CartPage /> }></Route>
-            <Route path="/checkout" element={ <CheckoutPage /> }></Route>
-            <Route path="/wishlist" element={ <WishlistPage /> }></Route>
+            <Route exact path="/" element={ <HomePage /> }></Route>
+            <Route exact path="/product/:productId" element={ <ProductPage /> }></Route>
+            <Route exact path="/cart" element={ <CartPage /> }></Route>
+            <Route exact path="/checkout" element={ <CheckoutPage /> }></Route>
+            <Route exact path="/wishlist" element={ <WishlistPage /> }></Route>
 
-            <Route path="/sign-in" element={ <SignInPage /> }></Route>
-            <Route path="/sign-up" element={ <SignUpPage /> }></Route>
-            <Route path="/forget-pass" element={ <ResetPage /> }></Route>
+            <Route exact path="/sign-in" element={ <SignInPage /> }></Route>
+            <Route exact path="/sign-up" element={ <SignUpPage /> }></Route>
+            <Route exact path="/forget-pass" element={ <ResetPage /> }></Route>
 
         </Routes>
         </>

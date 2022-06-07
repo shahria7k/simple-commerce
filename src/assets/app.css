@@ -270,6 +270,14 @@ ul{
     transition: .2s all ease-in-out;
     position: relative;
     margin: 10px;
+    text-align: center;
+}
+
+.categories-area .product-card .product-image img{
+    width: 50%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 20px;
 }
 
 .categories-area .product-card:hover{

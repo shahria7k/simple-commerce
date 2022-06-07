@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Slider from "react-slick"
 import ProductCard from '../products/ProductCard'
 import CategoryCard from './CategoryCard'
 
 const Categories = () => {
-    const settings = {
+    const sliderSettings = {
         infinite: true,
         autoplay: true,
         arrows: true,
@@ -24,23 +24,20 @@ const Categories = () => {
         ]
     };
 
+    const [categories, setCategories] = useState([]);
+    useEffect(() => {
+        fetch('https://fakestoreapi.com/products/categories')
+        .then(response => response.json())
+        .then(data => setCategories(data))
+    }, [])
+
     return (
         <section className="categories-area">
             <div className="container">
-                <Slider {...settings} className='slider'>
-                    <CategoryCard></CategoryCard>
-                    <CategoryCard></CategoryCard>
-                    <CategoryCard></CategoryCard>
-                    <CategoryCard></CategoryCard>
-                    <CategoryCard></CategoryCard>
-                    <CategoryCard></CategoryCard>
-                    <CategoryCard></CategoryCard>
-                    <CategoryCard></CategoryCard>
-                    <CategoryCard></CategoryCard>
-                    <CategoryCard></CategoryCard>
-                    <CategoryCard></CategoryCard>
-                    <CategoryCard></CategoryCard>
-                    <CategoryCard></CategoryCard>
+                <Slider {...sliderSettings} className='slider'>
+                    {
+                        categories.map(category => <CategoryCard title={category} />)
+                    }
                 </Slider>
             </div>
         </section>

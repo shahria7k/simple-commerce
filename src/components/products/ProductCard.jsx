@@ -7,9 +7,7 @@ function ProductCard({ photo, title, price, id }) {
         <div className="col-6 col-lg-3">
             <div className="product-card">
             <Link to={`/product/${id}`}>
-                <div className="btn-discount">
-                    50%
-                </div>
+                {price > 100 && <div className="btn-discount">{ Math.floor(Math.random() * 11) + 1 }%</div>}
                 <div className="product-image">
                     <img src={photo} alt="Product Image" className='img-fluid rounded' />
                 </div>

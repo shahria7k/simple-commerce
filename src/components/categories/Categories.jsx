@@ -4,14 +4,14 @@ import ProductCard from '../products/ProductCard'
 import CategoryCard from './CategoryCard'
 
 const Categories = () => {
-    const sliderSettings = {
+    const settings = {
         infinite: true,
         autoplay: true,
         arrows: true,
         speed: 2000,
         autoplaySpeed: 2500,
-        slidesToShow: 6,
-        slidesToScroll: 3,
+        slidesToShow: 4,
+        slidesToScroll: 2,
         dots: true,
         responsive: [
             {
@@ -28,15 +28,17 @@ const Categories = () => {
     useEffect(() => {
         fetch('https://fakestoreapi.com/products/categories')
         .then(response => response.json())
-        .then(data => setCategories(data))
-    }, [])
+        .then(data => setCategories(data));
+    }, []);
 
     return (
         <section className="categories-area">
             <div className="container">
-                <Slider {...sliderSettings} className='slider'>
+                <Slider {...settings} className='slider'>
                     {
-                        categories.map(category => <CategoryCard title={category} />)
+                        categories.map(category => 
+                            <CategoryCard title={category} />
+                        )
                     }
                 </Slider>
             </div>

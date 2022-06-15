@@ -20,7 +20,7 @@ const AddToCart = () => {
 								{/* <CartItem></CartItem>
                             <CartItem></CartItem> */}
 								{DB.map((item) => (
-									<p>{item.title}</p>
+									<p key={item.title}>{item.title}</p>
 								))}
 							</div>
 						</div>

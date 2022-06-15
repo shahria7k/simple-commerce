@@ -11,6 +11,7 @@ import SignUpPage from "./pages/SignUpPage";
 import WishlistPage from "./pages/WishlistPage";
 
 function App() {
+	console.log("app rerendered");
 	return (
 		<CartProvider>
 			<Routes>
